@@ -7,11 +7,6 @@ static void RenderSceneCB()
     glutSwapBuffers();
 }
 
-static void InitializeGlutCallbacks()
-{
-    glutDisplayFunc(RenderSceneCB);
-}
-
 int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
@@ -25,7 +20,5 @@ int main(int argc, char** argv)
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
     glutMainLoop();
-
-    glClear(GL_COLOR_BUFFER_BIT);
-    glutSwapBuffers();
+    return 0;
 }
